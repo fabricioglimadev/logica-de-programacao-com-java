@@ -14,8 +14,8 @@ public class Exercicio01V1 {
   public static void main(String[] args) {
 
     //Declaração de variáveis do tipo inteira e inicializando valor com zero
-    int soma = 0;
-    int contador = 0;
+    int somaIdade = 0;
+    int contadorDeIdade = 0;
 
     //Instanciando um variável do tipo Scanner que serve para fazer scanner do que é digitado pelo teclado
     Scanner scanner = new Scanner(System.in);
@@ -34,17 +34,17 @@ public class Exercicio01V1 {
         continue;
       }
 
-      soma += idade;
-      contador += 1;
+      somaIdade += idade;
+      contadorDeIdade += 1;
 
     }
 
-    double media = 0.0;
-    if (contador > 0){
-      media = (double) soma / contador;
+    double idadeMedia = 0.0;
+    if (contadorDeIdade > 0){
+      idadeMedia = (double) somaIdade / contadorDeIdade;
     }
 
-    System.out.println("Idade média: " + media);
+    System.out.println("Idade média: " + idadeMedia);
 
     scanner.close();
 

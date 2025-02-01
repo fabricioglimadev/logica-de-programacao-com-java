@@ -14,10 +14,10 @@ public class Exercicio01V4 {
   public static void main(String[] args) {
 
     //Declaração de variáveis do tipo inteira e inicializando valor com zero
-    int soma = 0;
-    int contador = 0;
+    int somaIdade = 0;
+    int contadorDeIdade = 0;
 
-    //Instanciando um variável do tipo Scanner que serve para fazer scanner do que é digitado pelo teclado
+    //Instanciando um variável do tipo Scanner que serve para fazer leitura do que é digitado pelo teclado
     Scanner scanner = new Scanner(System.in);
 
     int idade;
@@ -27,20 +27,20 @@ public class Exercicio01V4 {
     
     while (idade > 0){
 
-      soma += idade;
-      contador += 1;
+      somaIdade += idade;
+      contadorDeIdade += 1;
 
       System.out.println("Digite a idade");
       idade = scanner.nextInt();
 
     }
 
-    double media = 0.0;
-    if (contador > 0){
-      media = (double) soma / contador;
+    double idadeMedia = 0.0;
+    if (contadorDeIdade > 0){
+      idadeMedia = (double) somaIdade / contadorDeIdade;
     }
 
-    System.out.println("Idade média: " + media);
+    System.out.println("Idade média: " + idadeMedia);
 
     scanner.close();
 

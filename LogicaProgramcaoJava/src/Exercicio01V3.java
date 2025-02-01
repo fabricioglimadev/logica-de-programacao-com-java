@@ -14,8 +14,8 @@ public class Exercicio01V3 {
 
   public static void main(String[] args) {
 
-    int soma = 0;
-    int contador = 0;
+    int somaIdade = 0;
+    int contadorDeIdade = 0;
 
     Scanner scanner = new Scanner(System.in);
 
@@ -26,19 +26,19 @@ public class Exercicio01V3 {
 
       idade = scanner.nextInt();
 
-      soma += idade;
-      contador += 1;
+      somaIdade += idade;
+      contadorDeIdade += 1;
 
     } while (idade > 0);
 
-    contador -= 1;
+    contadorDeIdade -= 1;
 
-    double media = 0.0;
-    if (contador > 0){
-      media = (double) soma / contador;
+    double idadeMedia = 0.0;
+    if (contadorDeIdade > 0){
+      idadeMedia = (double) somaIdade / contadorDeIdade;
     }
 
-    System.out.println("Idade média: " + media);
+    System.out.println("Idade média: " + idadeMedia);
 
     scanner.close();
 
