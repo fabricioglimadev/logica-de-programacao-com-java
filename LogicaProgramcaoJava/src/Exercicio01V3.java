@@ -7,37 +7,31 @@ A última linha que não entrará nos cálculos, contém o valor da idade igual 
 * */
 
 
+
 import java.util.Scanner;
 
-public class Exercicio01V1 {
+public class Exercicio01V3 {
 
   public static void main(String[] args) {
 
-    //Declaração de variáveis do tipo inteira e inicializando valor com zero
     int soma = 0;
     int contador = 0;
 
-    //Instanciando um variável do tipo Scanner que serve para fazer scanner do que é digitado pelo teclado
     Scanner scanner = new Scanner(System.in);
 
-    
-    while (true){
+    int idade;
+
+    do {
       System.out.println("Digite a idade");
 
-      int idade = scanner.nextInt();
-
-      if (idade == 0){
-        break;
-      }
-
-      if (idade < 0){
-        continue;
-      }
+      idade = scanner.nextInt();
 
       soma += idade;
       contador += 1;
 
-    }
+    } while (idade > 0);
+
+    contador -= 1;
 
     double media = 0.0;
     if (contador > 0){
