@@ -13,11 +13,9 @@ public class Exercicio01V4 {
 
   public static void main(String[] args) {
 
-    //Declaração de variáveis do tipo inteira e inicializando valor com zero
     int somaIdade = 0;
     int contadorDeIdade = 0;
 
-    //Instanciando um variável do tipo Scanner que serve para fazer leitura do que é digitado pelo teclado
     Scanner scanner = new Scanner(System.in);
 
     int idade;
