@@ -18,10 +18,18 @@ public class Exercicio003 {
     for(int farenheit = 50; farenheit <= 150; farenheit++){
 
       double centigrado = (double) (farenheit - 32) * 5 / 9;
+      centigrado = Arredondamento.arredondar(centigrado,2);
       System.out.println(farenheit + "\t\t\t" + centigrado);
 
     }
 
   }
 
+}
+
+class Arredondamento{
+  public static double arredondar(double valor, int casasDecimais){
+    double potenciaDeDez = Math.pow(10,casasDecimais);
+    return Math.round(valor * potenciaDeDez)/potenciaDeDez;
+  }
 }
