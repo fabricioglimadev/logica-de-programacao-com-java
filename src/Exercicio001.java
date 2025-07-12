@@ -33,6 +33,11 @@ public class Exercicio001 {
           break;
         }
 
+        if(idade < 0){
+          System.out.println("Idade não pode ser negativa");
+          continue;
+        }
+
         somaIdade += idade;
         contadorDeIdade++;
 
