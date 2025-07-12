@@ -11,6 +11,8 @@ Fonte: Livro Algoritmos Estruturados – Harry Farrer
 * */
 
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -53,6 +55,9 @@ public class Exercicio001 {
       double media = 0;
       if(contadorDeIdade > 0){
         media = (double) somaIdade / contadorDeIdade;
+
+        //Arredondamento com duas casas decimais
+        media = Math.round(media * Math.pow(10,2))/Math.pow(10,2);
       }
 
       System.out.println("Idade média: " + media);
