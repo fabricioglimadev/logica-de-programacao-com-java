@@ -17,6 +17,7 @@ import java.util.Scanner;
 
 public class Exercicio002 {
 
+
   public static void main(String[] args) {
 
     Pessoas pessoas = new Pessoas();
@@ -62,8 +63,10 @@ public class Exercicio002 {
 
 }
 
+//Uso de record para representar uma pessoa com os dados de altura e sexo
 record Pessoa(double altura, String sexo) {}
 
+//A classe Pessoa irá conter uma lista de 50 pessoas com as informações de altura e sexo
 class Pessoas{
   public List<Pessoa> listar(){
     List<Pessoa> pessoas = new ArrayList<>();
