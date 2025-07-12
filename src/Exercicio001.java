@@ -11,6 +11,7 @@ Fonte: Livro Algoritmos Estruturados – Harry Farrer
 * */
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exercicio001 {
@@ -23,16 +24,23 @@ public class Exercicio001 {
     int contadorDeIdade = 0;
 
     while (true){
-
       System.out.println("Digite a idade");
-      int idade = scanner.nextInt();
+      try{
 
-      if(idade == 0){
+        int idade = scanner.nextInt();
+
+        if(idade == 0){
+          break;
+        }
+
+        somaIdade += idade;
+        contadorDeIdade++;
+
+      } catch (InputMismatchException e){
+        System.out.println("A idade deve ser um número inteiro");
         break;
       }
 
-      somaIdade += idade;
-      contadorDeIdade++;
 
     }
 
