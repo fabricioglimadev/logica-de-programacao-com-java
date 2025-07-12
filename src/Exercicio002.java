@@ -11,12 +11,9 @@ Fonte: Livro Algoritmos Estruturados – Harry Farrer
 
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Scanner;
 
 public class Exercicio002 {
-
 
 
   public static void main(String[] args) {
@@ -33,23 +30,23 @@ public class Exercicio002 {
 
     int numeroDeHomens = 0;
 
-    for (Pessoa pessoa : listaDePessoas){
+    for (Pessoa pessoa : listaDePessoas) {
 
       double altura = pessoa.altura();
-      if(altura < menor){
+      if (altura < menor) {
         menor = altura;
       }
-      if(altura > maior){
+      if (altura > maior) {
         maior = altura;
       }
 
-      if(pessoa.sexo().equals(Sexo.FEMININO)){
+      if (pessoa.sexo().equals(Sexo.FEMININO)) {
         somaAlturaFeminino += altura;
         contaAlturaFeminino++;
         mediaAlturaMulheres = (double) somaAlturaFeminino / contaAlturaFeminino;
       }
 
-      if(pessoa.sexo().equals(Sexo.MASCULINO)){
+      if (pessoa.sexo().equals(Sexo.MASCULINO)) {
         numeroDeHomens++;
       }
 
@@ -70,12 +67,13 @@ enum Sexo {
 }
 
 //Uso de record para representar uma pessoa com os dados de altura e sexo
-record Pessoa(double altura, Sexo sexo) {}
+record Pessoa(double altura, Sexo sexo) {
+}
 
 //A classe Pessoa irá conter uma lista de 50 pessoas com as informações de altura e sexo
-class Pessoas{
+class Pessoas {
 
-  public List<Pessoa> listar(){
+  public List<Pessoa> listar() {
     List<Pessoa> pessoas = new ArrayList<>();
 
     pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
