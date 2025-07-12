@@ -17,47 +17,50 @@ import java.util.Scanner;
 public class Exercicio001 {
 
   public static void main(String[] args) {
-
     Scanner scanner = new Scanner(System.in);
 
-    int somaIdade = 0;
-    int contadorDeIdade = 0;
+    try {
 
-    while (true){
-      System.out.println("Digite a idade");
-      try{
+      int somaIdade = 0;
+      int contadorDeIdade = 0;
 
-        int idade = scanner.nextInt();
+      while (true){
+        System.out.println("Digite a idade");
+        try{
 
-        if(idade == 0){
+          int idade = scanner.nextInt();
+
+          if(idade == 0){
+            break;
+          }
+
+          if(idade < 0){
+            System.out.println("Idade não pode ser negativa");
+            continue;
+          }
+
+          somaIdade += idade;
+          contadorDeIdade++;
+
+        } catch (InputMismatchException e){
+          System.out.println("A idade deve ser um número inteiro");
           break;
         }
 
-        if(idade < 0){
-          System.out.println("Idade não pode ser negativa");
-          continue;
-        }
 
-        somaIdade += idade;
-        contadorDeIdade++;
-
-      } catch (InputMismatchException e){
-        System.out.println("A idade deve ser um número inteiro");
-        break;
       }
 
+      double media = 0;
+      if(contadorDeIdade > 0){
+        media = (double) somaIdade / contadorDeIdade;
+      }
 
+      System.out.println("Idade média: " + media);
+
+
+    } finally {
+      scanner.close();
     }
-
-    double media = 0;
-    if(contadorDeIdade > 0){
-      media = (double) somaIdade / contadorDeIdade;
-    }
-
-    System.out.println("Idade média: " + media);
-
-    scanner.close();
-
 
   }
 
