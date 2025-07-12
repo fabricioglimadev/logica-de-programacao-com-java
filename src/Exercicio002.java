@@ -18,6 +18,7 @@ import java.util.Scanner;
 public class Exercicio002 {
 
 
+
   public static void main(String[] args) {
 
     Pessoas pessoas = new Pessoas();
@@ -42,13 +43,13 @@ public class Exercicio002 {
         maior = altura;
       }
 
-      if(pessoa.sexo().equals("Feminino")){
+      if(pessoa.sexo().equals(Sexo.FEMININO)){
         somaAlturaFeminino += altura;
         contaAlturaFeminino++;
         mediaAlturaMulheres = (double) somaAlturaFeminino / contaAlturaFeminino;
       }
 
-      if(pessoa.sexo().equals("Masculino")){
+      if(pessoa.sexo().equals(Sexo.MASCULINO)){
         numeroDeHomens++;
       }
 
@@ -63,68 +64,74 @@ public class Exercicio002 {
 
 }
 
+enum Sexo {
+  MASCULINO,
+  FEMININO
+}
+
 //Uso de record para representar uma pessoa com os dados de altura e sexo
-record Pessoa(double altura, String sexo) {}
+record Pessoa(double altura, Sexo sexo) {}
 
 //A classe Pessoa irá conter uma lista de 50 pessoas com as informações de altura e sexo
 class Pessoas{
+
   public List<Pessoa> listar(){
     List<Pessoa> pessoas = new ArrayList<>();
 
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.60, "Feminino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.60, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
 
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
 
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.74, "Masculino"));
-    pessoas.add(new Pessoa(1.60, "Feminino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.74, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.60, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
 
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
 
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.84, "Masculino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
-    pessoas.add(new Pessoa(1.55, "Feminino"));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.84, Sexo.MASCULINO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
+    pessoas.add(new Pessoa(1.55, Sexo.FEMININO));
 
     return pessoas;
   }
