@@ -12,6 +12,9 @@ determine e escreva o valor total de compra e de venda de todas as mercadorias, 
 lucro total.
 Observação: o aluno deve adotar um flag.
 
+Fonte: Livro Algoritmos Estruturados – Harry Farrer
+
+
 */
 
 import java.util.Scanner;
