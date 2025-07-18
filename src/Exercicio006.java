@@ -44,20 +44,6 @@ public class Exercicio006 {
     int minutos = 0;
     int segundos = 0;
 
-//    if(tempo >= 3600){
-//      horas = tempo / 3600;
-//      minutos = tempo % 3600;
-//      if(minutos >= 60){
-//        minutos = minutos / 60;
-//        segundos = minutos % 60;
-//      }
-//    } else if(tempo >= 60 && tempo < 3600){
-//      minutos = tempo / 60;
-//      segundos = tempo % 60;
-//    } else {
-//      segundos = tempo;
-//    }
-
     Tempo t = new Tempo(tempo);
 
     System.out.println("Tempo em horas: " + t.getHoras());
@@ -98,26 +84,21 @@ class Tempo{
   }
 
   private void calcular(){
+
+    segundos = tempoEmSegundos;
+
     if(tempoEmSegundos >= 3600){
       horas = tempoEmSegundos / 3600;
       minutos = tempoEmSegundos % 3600;
-      if(minutos >= 60){
-        minutos = minutos / 60;
-        segundos = minutos % 60;
+      if((tempoEmSegundos % 3600) >= 60){
+        minutos = (tempoEmSegundos % 3600) / 60;
+        segundos = (tempoEmSegundos % 3600) % 60;
       }
     } else if(tempoEmSegundos >= 60 && tempoEmSegundos < 3600){
       minutos = tempoEmSegundos / 60;
       segundos = tempoEmSegundos % 60;
-    } else {
-      segundos = tempoEmSegundos;
     }
 
-
-
-
   }
-
-
-
 
 }
