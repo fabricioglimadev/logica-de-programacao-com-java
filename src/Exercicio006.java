@@ -20,7 +20,8 @@ public class Exercicio006 {
 
     Scanner scanner = new Scanner(System.in);
 
-    double massaInicial = 10000000000000000000000f;//Em gramas
+    System.out.println("Digita o valor da massa inicial em gramas");
+    double massaInicial = scanner.nextDouble();
     double massaFinal = massaInicial;
     int tempo = 0;
     while(true){
