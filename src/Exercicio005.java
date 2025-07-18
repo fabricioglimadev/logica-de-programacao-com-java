@@ -21,8 +21,8 @@ public class Exercicio005 {
     int anos = 0;
 
     while (populacaoB <= populacaoA){
-      populacaoA = populacaoA + populacaoA * taxaA / 100.0;
-      populacaoB = populacaoB + populacaoB * taxaB / 100.0;
+      populacaoA = populacaoA * (1 + taxaA / 100.0);
+      populacaoB = populacaoB * (1 + taxaB / 100.0);
       anos++;
     }
 
